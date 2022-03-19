@@ -471,6 +471,22 @@ function resetForm()
             document.querySelectorAll(".movie-plot").forEach(plot => {
                 plot.value = '';
             });
+
+            document.querySelectorAll(".title-edit").forEach(title => {
+                title.value = '';
+             });
+
+            document.querySelectorAll(".date-edit").forEach(date => {
+                 date.value = '';
+            });
+
+            document.querySelectorAll(".rating-edit").forEach(rating => {
+                rating.value = '';
+            });
+
+            document.querySelectorAll(".image-url-edit").forEach(images => {
+                images.value = '';
+            });
         }
 
     });
@@ -488,14 +504,13 @@ function main()
     removeMedia();
 
     document.querySelector(".btn-add").addEventListener("click", ()=> {
-
         let title =  document.querySelector(".title").value;
         let releaseDate = document.querySelector(".date").value;
         let rating = document.querySelector(".rating").value;
         let image = document.querySelector(".image-url").value;
         let selectedType = document.querySelector("#selected-type2");
         let option = selectedType.options[selectedType.selectedIndex].value;
-
+        
         if (option === "game")
         {
             let studio = document.querySelector(".studio").value;
